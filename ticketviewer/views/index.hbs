@@ -1,5 +1,23 @@
+
 <h1>{{title}}</h1>
 <p>Welcome to the {{title}}</p>
+
+<script>
+$(document).ready(function() {
+  $(".btn-default").on("click",function(){
+    var val = $("#ticketId").val();
+     $.ajax({
+         type:"GET",
+         url:"/singleticket/"+val,
+         success:function(response){
+           window.location.href = '/singleticket/'+val;
+         }
+     });
+ });
+});
+</script>
+
+<p> Enter a Ticket ID to view its details:  <input type='text' id='ticketId'>  <input type="button" class="btn btn-default" value="Find"></i></p>
 
 {{# each tickets }}
   <div class="row">
