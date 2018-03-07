@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<p>Welcome to the {{title}}</p>
+
+{{# each tickets }}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3>Ticket Number: {{ this.id }}</h3>
+            <p class="subject">Subject: {{{this.subject}}}</p>
+            <p class="via">Via: {{{this.via.channel}}}: {{{this.via.source}}}</p>
+            <p class="createdat">Created At: {{{this.created_at}}}</p>
+            <p class="type">Type: {{{this.type}}}</p>
+            <p class="description">Description: {{{this.description}}}</p>
+            <p class="status">Status: {{{this.status}}}</p>
+            <p class="description">Priority: {{{this.priority}}}</p>
+            <!-- <div class="clearfix">
+            <! <div class="price pull-left"><i class="fa fa-tag" aria-hidden="true"></i>  this.price }} CHF</div>
+              <a href="/add/ this.id " class="btn btn-default pull-right" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a> -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
