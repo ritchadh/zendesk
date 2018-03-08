@@ -11,6 +11,9 @@ $(document).ready(function() {
          url:"/singleticket/"+val,
          success:function(response){
            window.location.href = '/singleticket/'+val;
+         },
+         error:function(xhr,status,error){
+           window.location.href = '/singleticket/'+val;
          }
      });
  });
@@ -26,7 +29,7 @@ $(document).ready(function() {
         <div class="caption">
           <h3>Ticket Number: {{ this.id }}</h3>
             <p class="subject">Subject: {{{this.subject}}}</p>
-            <p class="via">Via: {{{this.via.channel}}}: {{{this.via.source}}}</p>
+            <p class="via">Via: {{{this.via.channel}}}</p>
             <p class="createdat">Created At: {{{this.created_at}}}</p>
             <p class="type">Type: {{{this.type}}}</p>
             <p class="description">Description: {{{this.description}}}</p>

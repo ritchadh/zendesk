@@ -23,7 +23,6 @@ router.get('/', function(req, res, next) {
 
     else {
       res.render('error',{
-        title: 'Error Page',
         error: 'Page not Found'
       })
     }
@@ -44,7 +43,8 @@ var options = {
 };
 
 function callback(error, response, body) {
-  if (!body.error && !response.statusCode == 404) {
+
+  if (!body.error && response.statusCode == 200) {
     res.render('index',
     { title: 'Ticket Viewer',
       tickets: body
@@ -52,7 +52,6 @@ function callback(error, response, body) {
   }  else if (body.error.title){
     res.render('error',
     {
-      title: 'Page Error',
       error: body.error.title,
       message: body.error.message
     });
@@ -60,8 +59,7 @@ function callback(error, response, body) {
   else{
     res.render('error',
     {
-      title: 'Page Error',
-      error: body.error
+      error: body.error||'Page Not Found'
     });
   }
 
