@@ -18,11 +18,6 @@ Running locally on your machine-
 ```
     npm start
 ```
-   OR
-   Using nodemon:
-```
-    nodemon
-```
 
 5. To start mocha testcases:
 ```
