@@ -68,31 +68,4 @@ request.get(options, callback);
 
 });
 
-
-
-// router.get('/alltickets', function (req, res) {
-//
-//   request({
-//   uri: 'https://ritikachadha.zendesk.com/api/v2/tickets.json',
-//   auth:{
-//     user: 'ritikachadha05@gmail.com',
-//     pass: 'qwerty'
-//   },
-//   type: 'GET',
-//   dataType: 'json'
-// }).pipe(res);
-// });
-
-// router.get('/singleticket/:id', function (req, res) {
-//   request({
-//   uri: 'https://ritikachadha.zendesk.com/api/v2/tickets/'+id+'.json',
-//   auth:{
-//     user: 'ritikachadha05@gmail.com',
-//     pass: 'qwerty'
-//   },
-//   type: 'GET',
-//   dataType: 'json'
-// }).pipe(res);
-// });
-
 module.exports = router;
