@@ -17,36 +17,36 @@ router.get('/', function(req, res, next) {
     if (!error && response.statusCode == 200) {
       res.render('index',
       { title: 'Ticket Viewer',
-        tickets: body.tickets
-      });
-    }
-
-    else {
-      res.render('error',{
-        error: 'Page not Found'
-      })
-    }
+      tickets: body.tickets
+    });
   }
-  request.get(options, callback);
+
+  else {
+    res.render('error',{
+      error: 'Page not Found'
+    })
+  }
+}
+request.get(options, callback);
 
 });
 
 router.get('/singleticket/:id', function (req, res) {
 
-var options = {
-  url: 'https://ritikachadha.zendesk.com/api/v2/tickets/'+req.params.id+'.json',
-  json: true,
-  auth:{
-    username: 'ritikachadha05@gmail.com',
-    password: 'qwerty'
-  }
-};
+  var options = {
+    url: 'https://ritikachadha.zendesk.com/api/v2/tickets/'+req.params.id+'.json',
+    json: true,
+    auth:{
+      username: 'ritikachadha05@gmail.com',
+      password: 'qwerty'
+    }
+  };
 
-function callback(error, response, body) {
+  function callback(error, response, body) {
 
-  if (!body.error && response.statusCode == 200) {
-    res.render('index',
-    { title: 'Ticket Viewer',
+    if (!body.error && response.statusCode == 200) {
+      res.render('index',
+      { title: 'Ticket Viewer',
       tickets: body
     });
   }  else if (body.error.title){

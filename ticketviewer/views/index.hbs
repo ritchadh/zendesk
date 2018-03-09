@@ -6,38 +6,38 @@
 $(document).ready(function() {
   $(".btn-default").on("click",function(){
     var val = $("#ticketId").val();
-     $.ajax({
-         type:"GET",
-         url:"/singleticket/"+val,
-         success:function(response){
-           window.location.href = '/singleticket/'+val;
-         },
-         error:function(xhr,status,error){
-           window.location.href = '/singleticket/'+val;
-         }
-     });
- });
+    $.ajax({
+      type:"GET",
+      url:"/singleticket/"+val,
+      success:function(response){
+        window.location.href = '/singleticket/'+val;
+      },
+      error:function(xhr,status,error){
+        window.location.href = '/singleticket/'+val;
+      }
+    });
+  });
 });
 </script>
 
 <p> Enter a Ticket ID to view its details:  <input type='text' id='ticketId'>  <input type="button" class="btn btn-default" value="Find"></i></p>
 
 {{# each tickets }}
-  <div class="row">
-    <div class="col-md-12">
-      <div class="thumbnail">
-        <div class="caption">
-          <h3>Ticket Number: {{ this.id }}</h3>
-            <p class="subject">Subject: {{{this.subject}}}</p>
-            <p class="via">Via: {{{this.via.channel}}}</p>
-            <p class="createdat">Created At: {{{this.created_at}}}</p>
-            <p class="type">Type: {{{this.type}}}</p>
-            <p class="description">Description: {{{this.description}}}</p>
-            <p class="status">Status: {{{this.status}}}</p>
-            <p class="description">Priority: {{{this.priority}}}</p>
-            </div>
-        </div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>Ticket Number: {{ this.id }}</h3>
+        <p class="subject">Subject: {{{this.subject}}}</p>
+        <p class="via">Via: {{{this.via.channel}}}</p>
+        <p class="createdat">Created At: {{{this.created_at}}}</p>
+        <p class="type">Type: {{{this.type}}}</p>
+        <p class="description">Description: {{{this.description}}}</p>
+        <p class="status">Status: {{{this.status}}}</p>
+        <p class="description">Priority: {{{this.priority}}}</p>
       </div>
     </div>
   </div>
+</div>
+</div>
 {{/each}}
