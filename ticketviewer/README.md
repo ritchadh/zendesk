@@ -2,24 +2,51 @@
 
 Running locally on your machine-
 
-1. Install Node and NPM for this application to work.
+For Mac users,
 
-2. Clone this repository:
+Install XCode and Homebrew using the following command-
+
+```
+xcode-select --install
+```
+
+Install Homebrew
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install node
+```
+
+For Windows users,
+
+```
+Download the installer from the Node.js website.
+Run the installer
+Follow the prompts
+```
+
+Check the working of the node and npm by using the following commands:
+```
+node -v
+npm -v
+```
+
+Clone this repository:
 ```
     git clone https://github.com/ritchadh/zendesk.git
 ```
 
-3. Install all the dependencies
+Install all the dependencies
 ```
     npm install
 ```
 
-4. To start the server:
+To start the server:
 ```
     npm start
 ```
 
-5. To start mocha testcases:
+Simulatenously, start mocha testcases on another terminal
 ```
     npm test
 ```
