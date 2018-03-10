@@ -51,3 +51,7 @@ Simulatenously, start mocha testcases on another terminal:
 ```
     npm test
 ```
+Run the application through the following:
+```
+localhost:3000
+```
