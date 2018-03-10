@@ -37,7 +37,7 @@ Clone this repository:
     git clone https://github.com/ritchadh/zendesk.git
 ```
 
-Install all the dependencies by going to the ticketviewer directory and entering the following command: 
+Install all the dependencies by going to the 'ticketviewer' directory and entering the following command: 
 ```
     npm install
 ```
