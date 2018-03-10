@@ -14,6 +14,7 @@ Install Homebrew
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew install node
 ```
 
@@ -36,17 +37,17 @@ Clone this repository:
     git clone https://github.com/ritchadh/zendesk.git
 ```
 
-Install all the dependencies
+Install all the dependencies by going to the ticketviewer directory and entering the following command: 
 ```
     npm install
 ```
 
-To start the server:
+To start the server, type the following on the terminal:
 ```
     npm start
 ```
 
-Simulatenously, start mocha testcases on another terminal
+Simulatenously, start mocha testcases on another terminal:
 ```
     npm test
 ```
